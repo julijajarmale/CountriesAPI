@@ -58,7 +58,7 @@ searchBtn.addEventListener("click", () => {
 
 `;
         } else if (countryName.length === 0) {
-          result.innerHTML = "<h3>The input field can not be empty</h3>";
+          result.innerHTML = "<h3>Please enter a valid country name</h3>";
         }
       }
     });
