@@ -9,22 +9,22 @@ searchBtn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      console.log(data[0].name);
-      console.log(data[0].capital);
-      console.log(data[0].population);
-      console.log(data[0].flags.svg);
-      console.log(data[0].name.common);
-      console.log(data[0].continents[0]);
-      console.log(data[0].currencies[Object.keys(data[0].currencies)].name);
-      console.log(
-        Object.values(data[0].languages).toString().split(",").join(", ")
-      );
-      console.log(countryName);
+      //console.log(data[0].name);
+      //console.log(data[0].capital);
+      //console.log(data[0].population);
+      //console.log(data[0].flags.svg);
+      //console.log(data[0].name.common);
+      //console.log(data[0].continents[0]);
+      //console.log(data[0].currencies[Object.keys(data[0].currencies)].name);
+      //console.log(
+      //  Object.values(data[0].languages).toString().split(",").join(", ")
+      //);
+      //console.log(countryName);
 
       for (let i = 0; i < data.length; i++) {
-        if (data[i].name.common == countryName) {
+        if (data[i].name.common == countryName || data[i].name.common.toLowerCase() === countryName) {
           console.log(data[i]);
-          return (result.innerHTML = `
+          result.innerHTML = `
 <img src=${data[i].flags.svg} class="flag-img" />
 <h2>${data[i].name.common}</h2>
 <div class="wrapper">
@@ -53,15 +53,26 @@ searchBtn.addEventListener("click", () => {
     </div>
 </div>
 
-`)}
-      }
-    }).catch(() => {
-        if (countryName.length === 0) {
-            result.innerHTML ='<h3>The input field can not be empty</h3>';
+`} else if (countryName.length === 0){
+    result.innerHTML ='<h3>The input field can not be empty</h3>'
+}  
+}
 
-        }
-        else{
-            result.innerHTML =`<h3>Please, enter a valid country name</h3>`;
-        }
+    
+      
     })
+
 });
+
+
+
+//.catch(() => {
+//    if (countryName.length === 0) {
+//        return(
+//        result.innerHTML ='<h3>The input field can not be empty</h3>');
+//
+//    }
+//    else{
+//        result.innerHTML =`<h3>Please, enter a valid country name</h3>`;
+//    }
+//})
