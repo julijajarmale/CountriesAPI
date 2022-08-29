@@ -1,8 +1,8 @@
 # Some practice with API
-![Screenshot](screenshot1.jpg)
-![Screenshot](screenshot2.jpg)
-![Screenshot](screenshot3.jpg)
-![Screenshot](screenshot4.jpg)
+![Screenshot](./Screenshot_1.jpg)
+![Screenshot](./Screenshot_2.jpg)
+![Screenshot](./Screenshot_3.jpg)
+![Screenshot](./Screenshot_4.jpg)
 
 Site published at: https://julijajarmale.github.io/CountriesAPI/
 
