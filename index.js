@@ -22,7 +22,10 @@ searchBtn.addEventListener("click", () => {
       //console.log(countryName);
 
       for (let i = 0; i < data.length; i++) {
-        if (data[i].name.common == countryName || data[i].name.common.toLowerCase() === countryName) {
+        if (
+          data[i].name.common == countryName ||
+          data[i].name.common.toLowerCase() === countryName
+        ) {
           console.log(data[i]);
           result.innerHTML = `
 <img src=${data[i].flags.svg} class="flag-img" />
@@ -53,18 +56,13 @@ searchBtn.addEventListener("click", () => {
     </div>
 </div>
 
-`} else if (countryName.length === 0){
-    result.innerHTML ='<h3>The input field can not be empty</h3>'
-}  
-}
-
-    
-      
-    })
-
+`;
+        } else if (countryName.length === 0) {
+          result.innerHTML = "<h3>The input field can not be empty</h3>";
+        }
+      }
+    });
 });
-
-
 
 //.catch(() => {
 //    if (countryName.length === 0) {
